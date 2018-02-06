@@ -1,0 +1,13 @@
+$ git log
+commit ed4bf3025a31d06baef3e496a68cb9997d4566d6 (HEAD -> master)
+Author: Ekaterina Zhukova <kate.zhukova.98@gmail.com>
+Date:   Tue Feb 6 16:29:21 2018 +0300
+
+    add status.txt
+
+commit a253f8274194d0e556e51f11fc5039dbf46b72e5
+Author: Ekaterina Zhukova <kate.zhukova.98@gmail.com>
+Date:   Tue Feb 6 16:20:50 2018 +0300
+
+    add .gitignore
+
