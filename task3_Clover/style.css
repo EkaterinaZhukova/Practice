@@ -1,0 +1,156 @@
+body{
+    background-color: #dfedd6;
+    margin-top: 90px;
+
+    padding: 0;
+}
+header{
+    height:80px;
+    width:100%;
+    top:0;
+    left:0;
+    background-color: #aedd94;
+    position:fixed ;
+}
+footer{
+
+    background-color: #aedd94;
+    position: relative;
+    left: 0; bottom: 0;
+    width: 100%;
+    height: 150px;
+}
+.img1 {
+    width: 40%;
+    top:0;
+    float: left;
+    position: center;
+
+}
+.user{
+    font-family: 'Reem Kufi';
+    font-size: 20px;
+    float: left;
+    width: 40%;
+    padding-left: 15px;
+
+}
+ .img_in{
+    width:5%;
+    float: right;
+}
+ .img_add{
+    width: 5%;
+    float:right;
+}
+ .left{
+    width: 50%;
+    float: left;
+}
+  .footer_img{
+    margin-left: 15px;
+}
+.footer_name{
+
+    margin-left: 15px;
+    font-family: 'Reem Kufi';
+    font-size: 18px;
+}
+.footer_email{
+
+    margin-left: 15px;
+    font-family: 'Reem Kufi';
+    font-size: 18px;
+    font-style: italic;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+ .right{
+    width: 45%;
+    float: right;
+}
+.footer_group{
+    float: right;
+    margin-right: 15px;
+    font-size: 20px;
+    font-family: "Reem Kufi";
+    font-style: italic;
+    text-decoration: underline;
+}
+.main{
+    height:60%;
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+ .sign {
+
+    width: 600px;
+    padding: 7px; /* Поля внутри блока */
+    text-align: right ;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f0f0f0; /* Цвет фона */
+}
+figcaption {
+    margin: 0 auto 5px; /* Отступы вокруг абзаца */
+}
+.sub {
+    width: 5%;
+    float: left;
+    margin-top:0;
+}
+.main_author{
+    width:25%;
+    float:left;
+    font-size: 18px;
+    font-family: "Reem Kufi";
+}
+.date{
+    width: 70%;
+    float:right;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Reem Kufi";
+}
+.text{
+    font-style: italic;
+    font-size: 18px;
+    font-family: "Reem Kufi";
+    max-width: 600px;
+}
+.icon{
+    float:left;
+}
+.like{
+    float:left;
+    font-family: "Reem Kufi";
+    font-size: 26px;
+}
+.localhash{
+    position: fixed;
+    text-align: left;
+    float:left;
+    background-color: ghostwhite;
+    border-radius: 45px;
+    margin:  5px;
+    padding: 20px;/* Отступы вокруг абзаца */
+
+}
+.filt{
+    font-family: "Reem Kufi";
+    font-size: 18px;
+    border-radius:  5px;
+    width:60%;
+
+}
+.button{
+    font-family: "Reem Kufi";
+    font-size: 18px;
+    border-radius: 5px;
+    width:100px;
+    text-align: center;
+    margin-left: 45%;
+
+}
