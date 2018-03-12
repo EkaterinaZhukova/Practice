@@ -79,7 +79,7 @@ footer{
 }
 .main{
     height:60%;
-    width:60%;
+    width:100%;
     margin-left: auto;
     margin-right: auto;
 
@@ -87,8 +87,8 @@ footer{
  .sign {
 
     width: 600px;
+    max-width: 600px;
     padding: 7px; /* Поля внутри блока */
-    text-align: right ;
     margin-left: auto;
     margin-right: auto;
     background: #f0f0f0; /* Цвет фона */
@@ -104,12 +104,14 @@ figcaption {
 .main_author{
     width:25%;
     float:left;
+    text-align: left;
     font-size: 18px;
     font-family: "Reem Kufi";
 }
 .date{
-    width: 70%;
+    width: 75%;
     float:right;
+    text-align: right;
     font-size: 18px;
     font-weight: bold;
     font-family: "Reem Kufi";
@@ -119,6 +121,9 @@ figcaption {
     font-size: 18px;
     font-family: "Reem Kufi";
     max-width: 600px;
+    text-align: right;
+
+
 }
 .icon{
     float:left;
@@ -129,9 +134,12 @@ figcaption {
     font-size: 26px;
 }
 .localhash{
-    position: fixed;
+    position:fixed;
+
+	display: flex;
     text-align: left;
     float:left;
+    wdth:auto;
     background-color: ghostwhite;
     border-radius: 45px;
     margin:  5px;
@@ -142,7 +150,7 @@ figcaption {
     font-family: "Reem Kufi";
     font-size: 18px;
     border-radius:  5px;
-    width:60%;
+    width:auto;
 
 }
 .button{
@@ -153,4 +161,13 @@ figcaption {
     text-align: center;
     margin-left: 45%;
 
+}
+
+.close:hover {background: #e6e6ff;}
+
+@media only screen and (max-width: 800px) {
+    .main {
+        width: 90%;
+        height:90%;
+    }
 }

@@ -1,5 +1,5 @@
-;(function () {
-    var photoPosts = [
+let my_functions = (function () {
+    let photoPosts = [
         {
             id: '1',
             description: 'There should be some text',
@@ -94,7 +94,7 @@
         {
             id: '11',
             description: 'There should be some text',
-            createdAt: new Date('2018-03-02T21:05:00'),
+            createdAt: new Date('2019-03-02T21:05:00'),
             author: 'Ekaterina Zhukova',
             hashtags: '#sun#fun',
             photoLink: 'photos/winter.jpg',
@@ -148,8 +148,8 @@
         })[0];
     }
 
-    function getPhotoPosts(skip, top, filterConfig) {
-        var newPhotoPosts = photoPosts;
+    function getPhotoPosts(skip = 0, top = 10, filterConfig) {
+        let newPhotoPosts = photoPosts;
         if (filterConfig !== undefined) {
             if (filterConfig.author !== undefined && filterConfig.author !== "")
                 newPhotoPosts = filtrByAuthor(newPhotoPosts, filterConfig);
@@ -179,7 +179,7 @@
     }
 
     function filtrByHashtags(arr, filterConfig) {
-        var hash = filterConfig.hashtags.split('#');
+        let hash = filterConfig.hashtags.split('#');
         return arr.filter(function (value) {
             return hash.every(function (hash) {
                 return value.hashtags.indexOf(hash) >= 0;
@@ -193,11 +193,7 @@
             return false;
         if (post.id === undefined )
             return false;
-        for(var i = 0;i<photoPosts.length; i++)
-        {
-            if(post.id===photoPosts[i].id)
-                return false;
-        }
+
         if (post.description === undefined || post.description.length > 255)
             return false;
         if (post.createdAt === undefined || !(post.createdAt instanceof Date))
@@ -214,8 +210,7 @@
     }
 
     function addPhotoPost(post) {
-        if (!validatePhotoPost(post))
-        {
+        if (!validatePhotoPost(post)) {
             return false;
         }
         photoPosts.push(post);
@@ -223,12 +218,11 @@
     }
 
     function removePhotoPost(id) {
-        if (id === undefined)
-        {
+        if (id === undefined) {
             return false;
         }
-        var post=getPhotoPost(id);
-        var index = photoPosts.indexOf(post);
+        let post = getPhotoPost(id);
+        const index = photoPosts.indexOf(post);
         if (index === -1)
             return false;
         photoPosts.splice(index, 1);
@@ -236,17 +230,18 @@
     }
 
     function editPhotoPost(id, post) {
-        if (id === undefined || post === undefined||post===null || post.id !== undefined
-            || post.createdAt !== undefined || post.author !== undefined)
+        if (id === undefined || post === undefined || post === null || post.id !== undefined
+            || post.createdAt !== undefined || post.author !== undefined) {
             return false;
+        }
 
-        var previousPost = getPhotoPost(id);
-        var index = photoPosts.indexOf(previousPost);
+        let previousPost = getPhotoPost(id);
+        let index = photoPosts.indexOf(previousPost);
 
         post.id = previousPost.id;
         post.author = previousPost.author;
         post.createdAt = previousPost.createdAt;
-        post.likes=previousPost.likes;
+        post.likes = previousPost.likes;
         if (post.description === undefined) {
             post.description = previousPost.description;
         }
@@ -263,97 +258,29 @@
     function setLike(id, post) {
         if (id === undefined || post === undefined === post.author === undefined)
             return null;
-        // var photopost=getPhotoPost(id);
-        var post_1 = getPhotoPost(id);
-        var index = photoPosts.indexOf(post_1);
+        let post_1 = getPhotoPost(id);
+        let index = photoPosts.indexOf(post_1);
         if (photoPosts[index].likes.indexOf(post.author) === -1) {
             photoPosts[index].likes.push(post.author);
             return true;
         }
         else {
             photoPosts[index].likes.splice(photoPosts[index].likes.indexOf(post.author), 1);
-            console.log(photoPosts[index].likes.indexOf(post.author));
             return true;
         }
     }
 
-    function Check() {
-        console.log("My Array : ");
+    function printArray() {
         console.log(photoPosts);
-        console.log('getPhotoPost work for id==1');
-        console.log(getPhotoPost(1));
-        console.log('getPhotoPost work for id==16, more than length of array');
-        console.log(getPhotoPost(16));
-        console.log('getPhotoPosts work for date from fifth post without Date');
-        console.log(getPhotoPosts(0, 10, {
-            author: 'Ekaterina Zhukova',
-            //createdAt: new Date('2018-02-15T03:44:00'),
-            hashtags: '#beauty#smile'
-        }));
-        console.log('getPhotoPosts work for date from fifth post with Date');
-        console.log(getPhotoPosts(0, 10, {
-            author: 'Ekaterina Zhukova',
-            createdAt: new Date('2018-02-15T03:44:00'),
-            hashtags: '#beauty#smile'
-        }));
-        console.log('getPhotoPost work for id==1');
-        console.log(getPhotoPost(1));
-        console.log('getPhotoPosts work on author');
-        console.log(getPhotoPosts(0, 10, {
-            author: 'Harry Potter'
-        }));
-        console.log('getPhotoPosts shows first 10 posts sorted by date');
-        console.log(getPhotoPosts(0, 10));
-        console.log('getPhotoPosts shows second 10 posts sorted by date');
-        console.log(getPhotoPosts(10, 10));
-
-        console.log('add like. ');
-        setLike(14, {author: 'Ekaterina Zhukova'});
-
-        console.log(getPhotoPost(14));
-        // console.log('delete like. ');
-        //setLike(14,{author:'Ekaterina Zhukova'});
-        //console.log(getPhotoPost(14));
-
-
-        // console.log(getPhotoPost(14));
-        // addRemoveLike(14,{author:'Ekaterina Zhukova'});
-        // console.log(getPhotoPost(14));
-        if(addPhotoPost({
-            id: '16',
-            description: 'This post is created by function addPhotoPost',
-            createdAt: new Date('2018-03-05T11:49:00'),
-            author: 'William Shakespeare',
-            photoLink: 'photos/fog.jpg',
-            likes: ['Thomas More', 'Miguel de Cervantes Saavedra'],
-            hashtags:'#hashtag#marvellous'
-        })) console.log(photoPosts);
-        else  console.log('mistake');
-        removePhotoPost(16);
-        console.log(photoPosts);
-        editPhotoPost(15,{description:'It\'s changed description',hashtags:'#changed#hashgtag'});
-        console.log(getPhotoPost(15));
-        if(addPhotoPost({
-                id: '13',
-                description: 'This post is created by function addPhotoPost',
-                createdAt: new Date('2018-03-05T11:49:00'),
-                author: 'William Shakespeare',
-                photoLink: 'photos/fog.jpg',
-                likes: ['Thomas More', 'Miguel de Cervantes Saavedra'],
-                hashtags:'#hashtag#marvellous'
-            })) console.log(photoPosts);
-        else console.log('addPhtotPost mistake: not unique id')
-        if(!validatePhotoPost({
-                id: '5',
-                description: 'This post is created by function addPhotoPost',
-                createdAt: new Date('2018-03-05T11:49:00'),
-                author: 'William Shakespeare',
-                photoLink: 'photos/fog.jpg',
-                likes: ['Thomas More', 'Miguel de Cervantes Saavedra'],
-                hashtags:'#hashtag#marvellous'
-            }))console.log('invalid object!');
-
     }
 
-    Check();
+    return {
+        removePhotoPost: removePhotoPost,
+        addPhotoPost: addPhotoPost,
+        validatePhotoPost: validatePhotoPost,
+        editPhotoPost: editPhotoPost,
+        getPhotoPosts: getPhotoPosts,
+        printArray: printArray,
+        setLike:setLike
+    }
 })();
