@@ -1,11 +1,9 @@
 body{
     background-color: #dfedd6;
     margin-top: 90px;
-
     padding: 0;
 }
 header{
-    height:80px;
     width:100%;
     top:0;
     left:0;
@@ -21,10 +19,11 @@ footer{
     height: 150px;
 }
 .img1 {
-    width: 40%;
+    width: 30%;
     top:0;
     float: left;
-    position: center;
+    text-align: left;
+    position:center;
 
 }
 .user{
@@ -36,11 +35,8 @@ footer{
 
 }
  .img_in{
-    width:5%;
-    float: right;
-}
- .img_add{
-    width: 5%;
+     padding-top: 15px;
+    width:6%;
     float:right;
 }
  .left{
@@ -55,6 +51,10 @@ footer{
     margin-left: 15px;
     font-family: 'Reem Kufi';
     font-size: 18px;
+}
+.fa-5x{
+    font-size: 3em;
+
 }
 .footer_email{
 
@@ -86,13 +86,17 @@ footer{
 }
  .sign {
 
-    width: 600px;
+    width: 610px;
     max-width: 600px;
     padding: 7px; /* Поля внутри блока */
     margin-left: auto;
     margin-right: auto;
     background: #f0f0f0; /* Цвет фона */
 }
+ .post_image{
+     width:600px;
+     max-width: 600px;
+ }
 figcaption {
     margin: 0 auto 5px; /* Отступы вокруг абзаца */
 }
@@ -134,15 +138,11 @@ figcaption {
     font-size: 26px;
 }
 .localhash{
-    position:fixed;
-
-	display: flex;
-    text-align: left;
-    float:left;
-    wdth:auto;
+    width:90%;
     background-color: ghostwhite;
     border-radius: 45px;
-    margin:  5px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px;/* Отступы вокруг абзаца */
 
 }
@@ -150,8 +150,14 @@ figcaption {
     font-family: "Reem Kufi";
     font-size: 18px;
     border-radius:  5px;
-    width:auto;
-
+    width:31%;
+    text-align: center;
+}
+.filt1{
+    font-family: "Reem Kufi";
+    font-size: 18px;
+    border-radius:  5px;
+    text-align: center;
 }
 .button{
     font-family: "Reem Kufi";
@@ -162,12 +168,35 @@ figcaption {
     margin-left: 45%;
 
 }
-
+.filtr_button{
+    width: auto;
+    text-align: center;
+}
 .close:hover {background: #e6e6ff;}
-
-@media only screen and (max-width: 800px) {
-    .main {
-        width: 90%;
-        height:90%;
+@media only screen and (max-width: 900px) {
+    .img_in{
+        width: 10%;
     }
+}
+@media only screen and (max-width: 450px) {
+
+    .sign{
+        width:90%;
+    }
+
+    .post_image{
+        width:100%;
+    }
+
+    .user{
+        width: 25%;
+    }
+    .img_in{
+        padding-top: 5%;
+        width:14%;
+    }
+    .button{
+        margin-left: 40%;
+    }
+
 }

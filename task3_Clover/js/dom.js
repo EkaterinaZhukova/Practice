@@ -1,17 +1,20 @@
 let work = (function () {
      let user = 'Ekaterina Zhukova';
-    //let user = null;
+     //   let user = null;
 
     let head = document.querySelector('header');
     let name_user = document.createElement('h1');
     name_user.className = 'user';
 
+    let in_out = document.getElementsByClassName('fa-5x')[0];
 
-    let add_post = document.getElementsByClassName('img_add')[0];
+    let add_post = document.getElementsByClassName('img_in')[1];
     add_post.hidden = 1;
     if (user !== null) {
+        in_out.className = "fas fa-sign-out-alt fa-5x";
         name_user.textContent = user;
         add_post.hidden = 0;
+        console.log('not null');
     }
     head.insertBefore(name_user, document.getElementsByClassName('img1')[0]);
     const options = {
@@ -31,8 +34,8 @@ let work = (function () {
         sign.className = 'sign';
         sign.id = data.id;
         const image = document.createElement('img');
-        image.setAttribute("height", "600px");
-        image.setAttribute("width", "600px");
+        image.className = 'post_image';
+
         image.src = data.photoLink;
 
         const main_author = document.createElement('figcaption');
@@ -41,7 +44,7 @@ let work = (function () {
 
         const describtion_text = document.createElement('figcaption');
         describtion_text.className = 'text';
-        describtion_text.textContent = data.description;
+        describtion_text.textContent = data.description + 'dnjfns jdsk jhfre krjir khuwh skdhw sjdh wuge jshg jhr wjhr';
 
 
         const hashtags = document.createElement('figcaption');
@@ -89,6 +92,7 @@ let work = (function () {
     }
 
     function showPhotoPosts(skip = 0, top = 10, filterConfig) {
+        clean();
         let posts = my_functions.getPhotoPosts(skip, top, filterConfig);
         console.log(posts);
         for (let i = 0; i < posts.length; i++) {
@@ -135,7 +139,7 @@ let work = (function () {
         addPost: addPost,
         addPhotoPost: addPhotoPost,
         removePhotoPost: removePhotoPost,
-        editPhotoPost: editPhotoPost
+        editPhotoPost: editPhotoPost,
     }
 
 })();
