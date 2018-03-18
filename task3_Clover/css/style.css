@@ -131,6 +131,7 @@ figcaption {
 }
 .icon{
     float:left;
+    width:10%;
 }
 .like{
     float:left;
@@ -171,6 +172,9 @@ figcaption {
 .filtr_button{
     width: auto;
     text-align: center;
+}
+.size1{
+    font-size:2em;
 }
 .close:hover {background: #e6e6ff;}
 @media only screen and (max-width: 900px) {

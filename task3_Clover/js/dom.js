@@ -55,23 +55,15 @@ let work = (function () {
         date.className = 'date';
         date.textContent = data.createdAt.toLocaleString('en-US', options);
 
-        const img_like = document.createElement('img');
-        img_like.className = 'icon';
-        img_like.setAttribute("height", "30px");
-        img_like.setAttribute("width", "30px");
-        img_like.src = "img/heart.png";
+        const img_like = document.createElement('i');
+        img_like.className = 'far fa-heart icon size1';
 
-        const edit = document.createElement('img');
-        edit.className = 'icon';
-        edit.setAttribute("height", "30px");
-        edit.setAttribute("width", "30px");
-        edit.src = "img/redact.png";
 
-        const del = document.createElement('img');
-        del.className = 'icon';
-        del.setAttribute("height", "30px");
-        del.setAttribute("width", "30px");
-        del.src = "img/del.png";
+        const edit = document.createElement('i');
+        edit.className = 'fas fa-pencil-alt icon size1';
+
+        const del = document.createElement('i');
+        del.className = 'fas fa-trash-alt icon size1';
 
         const count_likes = document.createElement('h');
         count_likes.className = 'like';
@@ -135,11 +127,25 @@ let work = (function () {
     }
 
     return {
-        showPhotoPosts: showPhotoPosts,
-        addPost: addPost,
-        addPhotoPost: addPhotoPost,
-        removePhotoPost: removePhotoPost,
-        editPhotoPost: editPhotoPost,
+        showPhotoPosts,
+        addPost,
+        addPhotoPost,
+        removePhotoPost,
+        editPhotoPost
     }
 
 })();
+function showPhotoPosts(skip,top,filterConfig) {
+    work.showPhotoPosts(skip,top,filterConfig);
+}
+function addPhotoPost(post) {
+    work.addPhotoPost(post);
+}
+
+function editPhotoPost(id,post){
+    work.editPhotoPost(id,post);
+}
+
+function removePhotoPost(id) {
+    work.removePhotoPost(id);
+}
