@@ -1,0 +1,25 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "photoportal",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EkaterinaZhukova/Practice.git"
+  },
+  "keywords": [
+    "clover"
+  ],
+  "author": "Ekaterina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EkaterinaZhukova/Practice/issues"
+  },
+  "homepage": "https://github.com/EkaterinaZhukova/Practice#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
