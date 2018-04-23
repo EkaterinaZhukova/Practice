@@ -1,0 +1,32 @@
+.fa-exclamation-circle {
+    color: darkseagreen;
+    font-size: 35em;
+}
+.error-main{
+    width:90%;
+}
+.left-error {
+    width: 49%;
+    float: left;
+}
+
+.right-error {
+width: 45%;
+    float: right;
+
+}
+.error-text{
+    font-family: "Reem Kufi";
+    font-size: 80px;
+    text-align: center;
+}
+@media only screen and (max-width: 450px) {
+    .fa-exclamation-circle{
+        font-size: 10em;
+    }
+
+    .error-text{
+        font-size: 45px;
+        text-align: center;
+    }
+}
