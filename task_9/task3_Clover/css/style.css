@@ -1,0 +1,232 @@
+body{
+    background-color: #dfedd6;
+    margin-top: 90px;
+    padding: 0;
+}
+header{
+    width: 100%;
+    top:0;
+    left:0;
+    background-color: #aedd94;
+    position:fixed ;
+}
+footer{
+
+    background-color: #aedd94;
+    position: relative ;
+    left: 0; bottom: 0;
+    width: 100%;
+    height: 150px;
+    float: end;
+
+}
+.img1 {
+    width: 30%;
+    top:0;
+    float: left;
+    text-align: left;
+    position:center;
+    cursor: pointer;
+
+}
+.user{
+    font-family: 'Reem Kufi';
+    font-size: 20px;
+    float: left;
+    width: 40%;
+    padding-left: 15px;
+
+}
+ .img_in{
+     padding-top: 15px;
+    width:6%;
+    float:right;
+     cursor: pointer;
+}
+
+ .left{
+    width: 50%;
+    float: left;
+}
+  .footer_img{
+    margin-left: 15px;
+}
+.footer_name{
+
+    margin-left: 15px;
+    font-family: 'Reem Kufi';
+    font-size: 18px;
+}
+.fa-5x{
+    font-size: 3em;
+
+
+}
+.footer_email{
+
+    margin-left: 15px;
+    font-family: 'Reem Kufi';
+    font-size: 18px;
+    font-style: italic;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+ .right{
+    width: 45%;
+    float: right;
+}
+.footer_group{
+    float: right;
+    margin-right: 15px;
+    font-size: 20px;
+    font-family: "Reem Kufi";
+    font-style: italic;
+    text-decoration: underline;
+}
+.main{
+    height:60%;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+ .sign {
+
+    width: 610px;
+    max-width: 600px;
+    padding: 7px; /* Поля внутри блока */
+    margin-left: auto;
+    margin-right: auto;
+    background: #f0f0f0; /* Цвет фона */
+}
+ .dragAndDrop{
+     min-height: 300px;
+     /*min-width: 300px;*/
+     border-color:#4CAF50;
+     border-style: double;
+ }
+ .post_image{
+     width:600px;
+     max-width: 600px;
+ }
+figcaption {
+    margin: 0 auto 5px; /* Отступы вокруг абзаца */
+}
+.sub {
+    width: 5%;
+    float: left;
+    margin-top:0;
+}
+.main_author{
+    width:25%;
+    float:left;
+    text-align: left;
+    font-size: 18px;
+    font-family: "Reem Kufi";
+}
+.date{
+    width: 75%;
+    float:right;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Reem Kufi";
+}
+.text{
+    font-style: italic;
+    font-size: 18px;
+    font-family: "Reem Kufi";
+    max-width: 600px;
+    text-align: right;
+
+
+}
+.icon{
+    float:left;
+    width:10%;
+    cursor: pointer;
+}
+.like{
+    float:left;
+    font-family: "Reem Kufi";
+    font-size: 26px;
+    cursor: default;
+}
+.localhash{
+    width:90%;
+    background-color: ghostwhite;
+    border-radius: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;/* Отступы вокруг абзаца */
+
+}
+.filt{
+    font-family: "Reem Kufi";
+    font-size: 18px;
+    border-radius:  5px;
+    width:31%;
+    text-align: center;
+}
+.filt1{
+    font-family: "Reem Kufi";
+    font-size: 18px;
+    border-radius:  5px;
+    text-align: center;
+}
+.button{
+    font-family: "Reem Kufi";
+    font-size: 25px;
+    border-radius: 5px;
+    width:auto;
+    text-align: center;
+    margin-left: 45%;
+
+}
+.filtr_button{
+    width: auto;
+    text-align: center;
+}
+.size1{
+    font-size:2em;
+    cursor: pointer;
+
+}
+.redheart{
+    color:red;
+}
+.div1 {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+.close:hover {background: #e6e6ff;}
+@media only screen and (max-width: 900px) {
+    .img_in{
+        width: 10%;
+    }
+}
+@media only screen and (max-width: 450px) {
+
+    .sign{
+        width:90%;
+    }
+
+    .post_image{
+        width:100%;
+    }
+
+    .user{
+        width: 25%;
+    }
+    .img_in{
+        padding-top: 5%;
+        width:14%;
+    }
+    .button{
+        margin-left: 40%;
+    }
+
+}

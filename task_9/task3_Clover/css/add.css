@@ -1,0 +1,28 @@
+.add_describtion {
+    width: 100%;
+    max-width: 600px;
+    height: 100px;
+    border-radius: 5px;
+    border-style: hidden;
+    border: none;
+    font-family: "Reem Kufi";
+    font-size: 20px;
+    font-style: italic;
+    text-align: right;
+}
+.text_add{
+    font-size: 30px;
+    font-family: "Reem Kufi";
+    font-style: italic;
+}
+.drag_and_drop{
+    width:100%;
+    height:400px;
+    background: #daf7c4;
+}
+@media only screen and (max-width: 450px) {
+    .drag_and_drop{
+        height:300px;
+    }
+
+}
