@@ -180,5 +180,7 @@ function filtrPage() {
     }
     localStorage.setItem('filtrConfig',JSON.stringify(filtrConfig));
     work.clean();
-    showPhotoPosts(0,10,filtrConfig);
+    //showPhotoPosts(0,10,filtrConfig);
+	load()
+	
 }

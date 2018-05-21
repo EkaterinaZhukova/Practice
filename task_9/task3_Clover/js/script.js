@@ -33,7 +33,7 @@ let my_functions = (function () {
     let hash = filterConfig.hashtags.split('#');
     return arr.filter(function (value) {
       return hash.some(function (hash) {
-        return value.hashtags.indexOf(hash) >= 0;
+        return value.hashtags.indexOf(hash) > 0;
 
       })
     })
